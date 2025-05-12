@@ -1,0 +1,11 @@
+{
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/odata/standard.odata/$metadata",
+      "headers": {
+        "Content-Type": "application/xml"
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0"
+  xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices>
+    <Schema Namespace="1C" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityType Name="Catalog_Номенклатура">
+        <Key>
+          <PropertyRef Name="Ref_Key" />
+        </Key>
+        <Property Name="Ref_Key" Type="Edm.Guid" Nullable="false" />
+        <Property Name="Description" Type="Edm.String" Nullable="false" />
+        <Property Name="Комментарий" Type="Edm.String" />
+        <NavigationProperty Name="ВидЦен" Relationship="1C.FK_ВидЦен" ToRole="ВидЦен" FromRole="Номенклатура"/>
+      </EntityType>
+
+      <EntityType Name="Document_ПоступлениеТоваров">
+        <Key>
+          <PropertyRef Name="Ref_Key" />
+        </Key>
+        <Property Name="Ref_Key" Type="Edm.Guid" />
+        <Property Name="Дата" Type="Edm.DateTime" />
+        <Property Name="Сумма" Type="Edm.Decimal" />
+      </EntityType>
+
+      <EntityContainer Name="DefaultContainer">
+        <EntitySet Name="Catalog_Номенклатура" EntityType="1C.Catalog_Номенклатура" />
+        <EntitySet Name="Document_ПоступлениеТоваров" EntityType="1C.Document_ПоступлениеТоваров" />
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>
