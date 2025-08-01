@@ -3,7 +3,7 @@
   xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
   <edmx:DataServices>
     <Schema Namespace="1C" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-      <EntityType Name="Catalog_Номенклатура">
+      <EntityType Name="Catalog_Номенклатура111">
         <Key>
           <PropertyRef Name="Ref_Key" />
         </Key>
